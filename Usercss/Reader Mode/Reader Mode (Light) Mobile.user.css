@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           Reader Mode
+@name           Reader Mode Mobile
 @namespace      https://github.com/Natsulus/User-Library
 @version        0.1.4
 @description    A WIP customisable reader mode style for web novels. Default Dark.
@@ -17,9 +17,9 @@
 @font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/425691/000000000000000000017821/27/l?subset_id=1&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/425691/000000000000000000017821/27/d?subset_id=1&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/425691/000000000000000000017821/27/a?subset_id=1&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}
 
 :root {
-	--reading-width: 800px;
-	--text-colour: #ccc;
-	--background-colour: #222;
+	--reading-width: 600px;
+	--text-colour: #000;
+	--background-colour: #fff;
 	--side-padding: 0px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 p, .MsoNormal span, font, p span, .MsoNormal, .entry-content, .post-body > div > span, .content .primary main article.chapter .entry-content p, .container > .row > div > pre {
-	font-size: 17px !important;
+	font-size: 12px !important;
     line-height: inherit !important;
 }
 

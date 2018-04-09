@@ -18,8 +18,8 @@
 
 :root {
 	--reading-width: 800px;
-	--text-colour: #ccc;
-	--background-colour: #222;
+	--text-colour: #000;
+	--background-colour: #fff;
 	--side-padding: 0px;
 }
 
