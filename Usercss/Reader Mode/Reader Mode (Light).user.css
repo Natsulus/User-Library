@@ -35,6 +35,7 @@
 p, .MsoNormal span, font, p span, .MsoNormal, .entry-content, .post-body > div > span, .content .primary main article.chapter .entry-content p, .container > .row > div > pre {
 	font-size: 17px !important;
     line-height: inherit !important;
+    word-wrap: break-word !important;
 }
 
 .MsoNormal span, .MsoNormal + span, .content > .content-outer .content-inner .columns-inner .post-outer .post-body > :not([dir="ltr"]) span, .content > .content-outer .content-inner .columns-inner .post-outer .post-body ruby {
