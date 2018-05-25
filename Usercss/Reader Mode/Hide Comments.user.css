@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Hide Comments
+@namespace      https://github.com/Natsulus/User-Library
+@version        0.1.0
+@description    Additional CSS to Hide Comments for Reader Mode
+@author         Natsulus
+@homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
+@supportURL		https://github.com/Natsulus/User-Library/issues
+@preprocessor	default
+==/UserStyle== */
+@-moz-document domain("webnovel.com"), domain("volarenovels.com"), domain("moonbunnycafe.com"), domain("wuxiaworld.com"), domain("machineslicedbread.xyz"), domain("wordpress.com"), domain("saigotranslation.com"), domain("novitranslation.com"), domain("novelstranslation.com"), domain("myoniyonitranslations.com"), domain("pgttranslations.com"), domain("kobatochan.com"), domain("syzctranslations.github.io"), domain("translationnations.com"), domain("lightnovelstranslations.com"), domain("bayabuscotranslation.com"), domain("shinsori.com"), domain("amateurtranslations.com"), domain("novelsnchill.com"), domain("rpgnovels.com"), domain("uncommittedtranslations.bravesites.com"), domain("mistycloudtranslations.com"), domain("lightnovelbastion.com"), domain("oppatranslations.com"), domain("gravitytales.com"), domain("re-library.com"), domain("wuxianation.com"), domain("zenithnovels.com"), domain("novelsreborn.com"), domain("radianttranslations.com"), domain("ainushi.com"), domain("blogspot.com"), domain("scrya.org"), domain("raisingthedead.ninja"), domain("liberspark.com"), domain("shiroyukitranslations.com"), domain("aihristdreamtranslations.com"), domain("rancerqz.com"), domain("comegatranslations.com"), domain("razpyon.tumblr.com"), domain("rebirth.online"), domain("syilpharhea.com"), domain("snowycodex.com"), domain("pyontranslations.com"), domain("blobtranslations.com"), domain("storiesonline.net"), domain("fantasy-books.live"), domain("paste.imirhil.fr"), domain("paste.jaegers.net"), domain("otakulair.com"), domain("oniichanyamete.moe"), domain("ebisutranslations.com") {
+#comments, #comment_form_title, #comment_form_area, #disqus_thread {
+    display: none !important;
+}
+}
