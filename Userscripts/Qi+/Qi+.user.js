@@ -98,8 +98,8 @@ class Modal {
             this.qipToolBtn.addClass("_on");
             $("html").addClass("_sd_on");
         } else {
-        this.modal.addClass("show");
-        this.modal.removeClass("hide");
+			this.modal.addClass("show");
+			this.modal.removeClass("hide");
         }
     }
 
@@ -109,8 +109,8 @@ class Modal {
             this.qipToolBtn.removeClass("_on");
             if(!swap) $("html").removeClass("_sd_on");
         } else {
-        this.modal.addClass("hide");
-        this.modal.removeClass("show");
+			this.modal.addClass("hide");
+			this.modal.removeClass("show");
         }
     }
 }
@@ -236,3 +236,12 @@ function createElements(config) {
 Hide Ads
 .g_ad_ph {display: none;}
 */
+
+$("#modalCatalog").prepend()
+(`<a href="javascript:;" class="_close"><svg><use xlink:href="#i-times"></use></svg></a>`)
+
+// Give above close button an action to close the modal
+
+onModalCatalogClick() {
+		
+}
