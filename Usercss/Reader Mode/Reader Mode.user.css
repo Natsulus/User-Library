@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        0.1.9
+@version        0.1.10
 @description    A WIP customisable reader mode style for web novels. Default Dark.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
@@ -34,7 +34,7 @@
 
 p, .MsoNormal span, font, p span, .MsoNormal, .entry-content, .post-body > div > span, .content .primary main article.chapter .entry-content p, .container > .row > div > pre {
 	font-size: 17px !important;
-    line-height: 24px !important;
+    line-height: 23px !important;
     word-wrap: break-word !important;
 }
 
