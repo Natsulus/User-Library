@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Reader Mode (White)
 @namespace      https://github.com/Natsulus/User-Library
-@version        0.1.12
+@version        0.1.13
 @description    A WIP customisable reader mode style for web novels. Default Dark.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
@@ -104,8 +104,8 @@ article:not(.comment):not(.comment-body), #story, #top, #content, #main-wrapper,
 	min-width: var(--reading-width) !important;
 }
 
-.sp-wrap-default, .sp-wrap-default .sp-body {
-	background: transparent;
+.sp-wrap-default, .sp-wrap-default .sp-body, p[dir=ltr] + table {
+	background: transparent !important;
     border-color: #333;
 }
 
