@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        0.1.16
+@version        0.1.17
 @description    A WIP customisable reader mode style for web novels. Default Dark.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
@@ -89,7 +89,7 @@ body, body.page, html, body.custom-background {
 	display: flex !important;
 }
 
-article:not(.comment):not(.comment-body), #story, #top, #content, #main-wrapper, #main, #primary, #primary-content, #page, #td-outer-wrap, #wrapper, #wrapper > #container, #wrapper.hfeed, .hentry, .entry-wrapper, .content-inner, .post-inner-content, .wrapper, .content-sidebar-wrap, .not-found, .error404 #main .searchform, .content, .site-container, .entry-header, .entry-content, .td-main-content, .td-main-content-wrap, .tdc-content-wrap, .td-pb-row, .td-container, .post_wrapper, .blog_post, .x-container, .x-main, body .x-main.left, .entry-wrap, .content-area, #content .row, #content .col-md-8, .box, :not(.comment-details) > .row, .container, .\38 u, .\38 u\24, .main-content, .main-outer, .footer-outer, .main-inner .columns, #comments, .layout__item, .comment-list, .chapter-body p, .format-standard .entry-wrap, .content-wrapper, .post, .section-inner, .post-content, .span8, .span8 > .left-col, .container > .row > div, .cha-page-in, #content-wrapper, .column-center-inner, .content-outer, .lightpanel, .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1), .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width {
+article:not(.comment):not(.comment-body), #story, #top, #content, #main-wrapper, #main, #primary, #primary-content, #page, #td-outer-wrap, #wrapper, #wrapper > #container, #wrapper.hfeed, .hentry, .entry-wrapper, .content-inner, .post-inner-content, .wrapper, .content-sidebar-wrap, .not-found, .error404 #main .searchform, .content, .site-container, .entry-header, .entry-content, .td-main-content, .td-main-content-wrap, .tdc-content-wrap, .td-pb-row, .td-container, .post_wrapper, .blog_post, .x-container, .x-main, body .x-main.left, .entry-wrap, .content-area, #content .row, #content .col-md-8, .box, :not(.comment-details) > .row, .container, .\38 u, .\38 u\24, .main-content, .main-outer, .footer-outer, .main-inner .columns, #comments, .layout__item, .comment-list, .chapter-body p, .format-standard .entry-wrap, .content-wrapper, .post, .section-inner, .post-content, .span8, .span8 > .left-col, .container > .row > div, .cha-page-in, #content-wrapper, .column-center-inner, .content-outer, .lightpanel, .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1), .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group {
 	margin: 0 auto !important;
     width: var(--reading-width) !important;
 	background-color: transparent !important;
