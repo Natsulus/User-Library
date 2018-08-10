@@ -1,5 +1,13 @@
 # User Library
 
-A repository for my userscripts and usercss.
+A repository for my usercss and userscripts.
+## Status
 
-All are currently WIP and don't do what they're planned to do yet, however they are still usable.
+### Usercss
+- Reader Mode: Production Ready and Usable (v1.0.0)
+- Focus Mode: Not Started
+- Style Choice: Not Started
+- SoundCloud: WIP, may merge with Style Choice
+
+### Userscripts
+- Qi+: WIP
