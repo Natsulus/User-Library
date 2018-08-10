@@ -1,228 +1,265 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        0.1.18
-@description    A WIP customisable reader mode style for web novels. Default Dark.
+@version        1.0.0
+@description    A customisable reader mode style for web novels. Default Dark Theme.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
 @supportURL		https://github.com/Natsulus/User-Library/issues
-@preprocessor	default
+@preprocessor	stylus
+@var select device "Device" {
+    "PC": "pc",
+    "Mobile": "mobile"
+}
+@var select theme "Theme" {
+    "Dark": "dark",
+    "Light": "light"
+}
+@var checkbox checkReadingWidth "Custom Reading Width" 0
+@var text customReadingWidth "Value" 800px
+@var checkbox checkFontSize "Custom Font Size" 0
+@var text customFontSize "Value" 17px
+@var checkbox checkLineHeight "Custom Line Height" 0
+@var text customLineHeight "Value" 23px
+@var checkbox checkTextColour "Custom Text Colour" 0
+@var color customTextColour "Value" #CCCCCC
+@var checkbox checkBackgroundColour "Custom Background Colour" 0
+@var color customBackgroundColour "Value" #222222
+@var checkbox checkSidePadding "Custom Side Padding" 0
+@var text customSidePadding "Value" 0px
+@var checkbox hideComments "Hide Comments" 0
 ==/UserStyle== */
-@-moz-document domain("webnovel.com"), domain("volarenovels.com"), domain("moonbunnycafe.com"), domain("wuxiaworld.com"), domain("machineslicedbread.xyz"), domain("wordpress.com"), domain("saigotranslation.com"), domain("novitranslation.com"), domain("novelstranslation.com"), domain("myoniyonitranslations.com"), domain("pgttranslations.com"), domain("kobatochan.com"), domain("syzctranslations.github.io"), domain("translationnations.com"), domain("lightnovelstranslations.com"), domain("bayabuscotranslation.com"), domain("shinsori.com"), domain("amateurtranslations.com"), domain("novelsnchill.com"), domain("rpgnovels.com"), domain("uncommittedtranslations.bravesites.com"), domain("mistycloudtranslations.com"), domain("lightnovelbastion.com"), domain("oppatranslations.com"), domain("gravitytales.com"), domain("re-library.com"), domain("wuxianation.com"), domain("zenithnovels.com"), domain("novelsreborn.com"), domain("radianttranslations.com"), domain("ainushi.com"), domain("blogspot.com"), domain("scrya.org"), domain("raisingthedead.ninja"), domain("liberspark.com"), domain("shiroyukitranslations.com"), domain("aihristdreamtranslations.com"), domain("rancerqz.com"), domain("comegatranslations.com"), domain("razpyon.tumblr.com"), domain("rebirth.online"), domain("syilpharhea.com"), domain("snowycodex.com"), domain("pyontranslations.com"), domain("blobtranslations.com"), domain("storiesonline.net"), domain("fantasy-books.live"), domain("paste.imirhil.fr"), domain("paste.jaegers.net"), domain("otakulair.com"), domain("oniichanyamete.moe"), domain("ebisutranslations.com"), domain("paste.fizi.ca"), domain("fictionpress.com"), domain("ensjtrans.com"), domain("ehmed.xyz") {
-@font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/2b6746/000000000000000000017829/27/l?subset_id=1&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/2b6746/000000000000000000017829/27/d?subset_id=1&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/2b6746/000000000000000000017829/27/a?subset_id=1&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}
-@font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/f87c74/00000000000000000001782a/27/l?subset_id=1&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/f87c74/00000000000000000001782a/27/d?subset_id=1&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/f87c74/00000000000000000001782a/27/a?subset_id=1&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}
-@font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/275e5f/000000000000000000017827/27/l?subset_id=1&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/275e5f/000000000000000000017827/27/d?subset_id=1&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/275e5f/000000000000000000017827/27/a?subset_id=1&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}
-@font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/6324fc/000000000000000000017823/27/l?subset_id=1&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/6324fc/000000000000000000017823/27/d?subset_id=1&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/6324fc/000000000000000000017823/27/a?subset_id=1&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}
-@font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/7d89b2/000000000000000000017824/27/l?subset_id=1&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/7d89b2/000000000000000000017824/27/d?subset_id=1&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/7d89b2/000000000000000000017824/27/a?subset_id=1&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}
-@font-face{font-family:Proxima-Nova;src:url(https://use.typekit.net/af/425691/000000000000000000017821/27/l?subset_id=1&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/425691/000000000000000000017821/27/d?subset_id=1&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/425691/000000000000000000017821/27/a?subset_id=1&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}
 
-:root {
-	--reading-width: 800px;
-	--text-colour: #ccc;
-	--background-colour: #222;
-	--side-padding: 0px;
-}
+@-moz-document domain("webnovel.com"), domain("volarenovels.com"), domain("moonbunnycafe.com"), domain("wuxiaworld.com"), domain("machineslicedbread.xyz"), 
+domain("wordpress.com"), domain("saigotranslation.com"), domain("novitranslation.com"), domain("novelstranslation.com"), domain("myoniyonitranslations.com"),
+domain("pgttranslations.com"), domain("kobatochan.com"), domain("syzctranslations.github.io"), domain("translationnations.com"), domain("lightnovelstranslations.com"),
+domain("bayabuscotranslation.com"), domain("shinsori.com"), domain("amateurtranslations.com"), domain("novelsnchill.com"), domain("rpgnovels.com"),
+domain("uncommittedtranslations.bravesites.com"), domain("mistycloudtranslations.com"), domain("lightnovelbastion.com"), domain("oppatranslations.com"),
+domain("gravitytales.com"), domain("re-library.com"), domain("wuxianation.com"), domain("zenithnovels.com"), domain("novelsreborn.com"),
+domain("radianttranslations.com"), domain("ainushi.com"), domain("blogspot.com"), domain("scrya.org"), domain("raisingthedead.ninja"), domain("liberspark.com"),
+domain("shiroyukitranslations.com"), domain("aihristdreamtranslations.com"), domain("rancerqz.com"), domain("comegatranslations.com"), domain("razpyon.tumblr.com"),
+domain("rebirth.online"), domain("syilpharhea.com"), domain("snowycodex.com"), domain("pyontranslations.com"), domain("blobtranslations.com"),
+domain("storiesonline.net"), domain("fantasy-books.live"), domain("paste.imirhil.fr"), domain("paste.jaegers.net"), domain("otakulair.com"),
+domain("oniichanyamete.moe"), domain("ebisutranslations.com"), domain("paste.fizi.ca"), domain("fictionpress.com"), domain("ensjtrans.com"),
+domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com")
+    defaultSidePadding = 0px
 
-*:not(a):not(._on):not(i):not(svg), .content .primary main article.chapter .entry-content p, p > i {
-	color: var(--text-colour) !important;
-}
+    if device == pc
+        defaultReadingWidth = 800px
+        defaultFontSize = 17px
+        defaultLineHeight = 23px
+    if device == mobile
+        defaultReadingWidth = 600px
+        defaultFontSize = 13px
+        defaultLineHeight = 20px
+    if theme == dark
+        defaultTextColour = #CCC
+        defaultBackgroundColour = #222
+    if theme == light
+        defaultTextColour = #000
+        defaultBackgroundColour = #FFF
 
-*, .content .primary main article.chapter .entry-content p {
-	font-family: Proxima-Nova, Arial, Verdana !important;
-    text-shadow: none !important;
-}
+    *:not(a):not(._on):not(i):not(svg), .content .primary main article.chapter .entry-content p, p > i
+        if checkTextColour
+          color: customTextColour !important
+        else
+          color: defaultTextColour !important
 
-p, .MsoNormal span, font, p span, .MsoNormal, .entry-content, .post-body > div > span, .content .primary main article.chapter .entry-content p, .container > .row > div > pre {
-	font-size: 17px !important;
-    line-height: 23px !important;
-    word-wrap: break-word !important;
-}
+    *, .content .primary main article.chapter .entry-content p
+        font-family: Arial,sans-serif,Verdana !important
+        text-shadow: none !important
+    
+    p, .MsoNormal span, font, p span, .MsoNormal, .entry-content, .post-body > div > span, .content .primary main article.chapter .entry-content p, .container > .row > div > pre
+        if checkFontSize
+            font-size: customFontSize !important
+        else
+            font-size: defaultFontSize !important
+        if checkLineHeight
+            line-height: customLineHeight !important
+        else
+            line-height: defaultLineHeight !important
+        word-wrap: break-word !important
+        
+    .MsoNormal span, .MsoNormal + span, .content > .content-outer .content-inner .columns-inner .post-outer .post-body > :not([dir="ltr"]) span,
+    .content > .content-outer .content-inner .columns-inner .post-outer .post-body ruby
+        background: rgba(220, 220, 220, 0.05) !important
+        border: 1px solid rgba(111, 111, 111, 0.1) !important
+        
+    a, a p, a font, a span, a strong
+        color: #a00000 !important
 
-.MsoNormal span, .MsoNormal + span, .content > .content-outer .content-inner .columns-inner .post-outer .post-body > :not([dir="ltr"]) span, .content > .content-outer .content-inner .columns-inner .post-outer .post-body ruby {
-	background: rgba(220, 220, 220, 0.05) !important;
-    border: 1px solid rgba(111, 111, 111, 0.1) !important;
-}
+    a:hover, a:hover p, a:hover font, a:hover span, a:hover strong
+        color: #bb0000 !important
 
-a, a p, a font, a span, a strong {
-	color: #a00000 !important;
-}
+    a:visited, a:visited p, a:visited font, a:visited span, a:visited strong
+        color: #8705a7 !important
 
-a:hover, a:hover p, a:hover font, a:hover span, a:hover strong {
-	color: #bb0000 !important;
-}
+    a:visited:hover, a:visited:hover p, a:visited:hover font, a:visited:hover span, a:visited:hover strong
+        color: #a12ebe !important
 
-a:visited, a:visited p, a:visited font, a:visited span, a:visited strong {
-	color: #8705a7 !important;
-}
+    .entry-title
+        text-align: center !important
 
-a:visited:hover, a:visited:hover p, a:visited:hover font, a:visited:hover span, a:visited:hover strong {
-	color: #a12ebe !important;
-}
+    body, body.page, html, body.custom-background
+        if checkBackgroundColour
+            background-color: customBackgroundColour !important
+        else
+            background-color: defaultBackgroundColour !important
+        background-image: none !important
+        padding: 0 !important
+        filter: none !important
+        border: none !important
 
-.entry-title {
-	text-align: center !important;
-}
+    .cha-header, .cha-fly
+        opacity: 0
 
-body, body.page, html, body.custom-background {
-	background-color: var(--background-colour) !important;
-    background-image: none !important;
-    padding: 0 !important;
-    filter: none !important;
-    border: none !important;
-}
+    .cha-header:hover, .cha-fly:hover
+        opacity: 1
+        
+    #container
+	    display: flex !important
+        
+    [role=navigation], [role=banner], [role=complementary], :not(.page-container) > nav, footer:not(.comment-meta),
+    :not(#chapterContent) > header:not(.modal-header):not(.entry-header):not(.td-post-title):not(#releases):not(.Header__header--1aWg-), #header, #access, #wp_access_helper_container,
+    #promotion-message, #site-header, #fallbackImage, #navbar, #primary-sidebar, #jp-relatedposts, #sidebar, #allaction, #post-footer, #contact, #footer, #header_wrapper, #nav-above.navigation,
+    #nav-below.navigation, #footer_wrapper, #location_1 > .asterion_components_container, .site-top, .entry-footer, .site-wordpress, .site-image, .content-inner header, .tabs-outer,
+    .column-right-outer, .post-footer, .blog-pager, .sharedaddy, .widget-areas, .breadcrumb, .hentry:after, .td-header-wrap, .td-footer-wrapper, .td-sub-footer-container, .sharedaddy, .entry-author,
+    .osny-nightmode, .shins-before-content, .share, .metadata, .post_read_more, .entry-utility, .wrapper.style2 > .container, .side-nav, div.header, div.navbar, .kudoable, .chapter-header,
+    .backstretch, .meta-comments, .navigation.section, .credits.section, .main-container .container:after, .footer, #main .dropdown > button.dropdown-toggle, .menu-search, #page:before, #page:after,
+    .cha-lst.sm-hide.j_update_list, #hero-header, .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_4,
+    .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7 .notes, #actionbar, #back-to-top, .wpulike, .hm11.x-bar-space, .hm1.x-bar, .hm11.x-bar, .x-off-canvas,
+    .x-scroll-top.right, #x-root > div.x-bar-space-right, .container > .content > .row > div:nth-child(2), .pp .top-bar-area, .navigation-bar, #wpadminbar, #header-image, #author-info, #scrollup,
+    .zmenu, #pre_story_links, #profile_top, .lc-wrapper, #review, #p_footer, .t_head.hbox, body#top > #content, #d_menu, .menulink.maxwidth, .header-bg, .main-sidebar, #back-top,
+    .panel > .panel-heading, .header-image
+	    display: none !important
+        
+    article:not(.comment):not(.comment-body), #story, #top, #content, #main-wrapper, #main, #primary, #primary-content, #page, #td-outer-wrap, #wrapper, #wrapper > #container, #wrapper.hfeed,
+    .hentry, .entry-wrapper, .content-inner, .post-inner-content, .wrapper, .content-sidebar-wrap, .not-found, .error404 #main .searchform, .content, .site-container, .entry-header,
+    .entry-content, .td-main-content, .td-main-content-wrap, .tdc-content-wrap, .td-pb-row, .td-container, .post_wrapper, .blog_post, .x-container, .x-main, body .x-main.left, .entry-wrap,
+    .content-area, #content .row, #content .col-md-8, .box, :not(.comment-details) > .row, .container, .main-content, .main-outer, .footer-outer, .main-inner .columns,
+    #comments, .layout__item, .comment-list, .chapter-body p, .format-standard .entry-wrap, .content-wrapper, .post, .section-inner, .post-content, .span8, .span8 > .left-col,
+    .container > .row > div, .cha-page-in, #content-wrapper, .column-center-inner, .content-outer, .lightpanel,
+    .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1),
+    .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper
+        margin: 0 auto !important
+        background-color: transparent !important
+        background-image: none !important
+        position: static !important
+        border: none !important
+        padding: 0 !important
+        box-shadow: none !important
+        max-width: 100% !important
+        if checkReadingWidth
+            min-width: customReadingWidth !important
+            width: customReadingWidth !important
+        else
+            min-width: defaultReadingWidth !important
+            width: defaultReadingWidth !important
+        if checkSidePadding
+            padding-left: customSidePadding !important
+            padding-right: customSidePadding !important
+        else
+            padding-left: defaultSidePadding !important
+            padding-right: defaultSidePadding !important
+            
+    .sp-wrap-default, .sp-wrap-default .sp-body, p[dir=ltr] + table
+        background: transparent !important
+        border-color: #333
 
-.cha-header, .cha-fly {
-	opacity: 0;
-}
+    hr
+        margin: 0 auto !important
+        background-color: #666
+        border-color: #666
+        padding: 0 !important
 
-.cha-header:hover, .cha-fly:hover {
-	opacity: 1;
-}
+    #textbox .alignleft, #textbox .alignright
+        width: 48%
+        display: table-cell
 
-[role=navigation], [role=banner], [role=complementary], :not(.page-container) > nav, footer:not(.comment-meta), :not(#chapterContent) > header:not(.modal-header):not(.entry-header):not(.td-post-title):not(#releases):not(.Header__header--1aWg-), #header, #access, #wp_access_helper_container, #promotion-message, #site-header, #fallbackImage, #navbar, #primary-sidebar, #jp-relatedposts, #sidebar, #allaction, #post-footer, #contact, #footer, #header_wrapper, #nav-above.navigation, #nav-below.navigation, #footer_wrapper, #location_1 > .asterion_components_container, .site-top, .entry-footer, .site-wordpress, .site-image, .content-inner header, .tabs-outer, .column-right-outer, .post-footer, .blog-pager, .sharedaddy, .widget-areas, .breadcrumb, .hentry:after, .td-header-wrap, .td-footer-wrapper, .td-sub-footer-container, .sharedaddy, .entry-author, .osny-nightmode, .shins-before-content, .share, .metadata, .post_read_more, .entry-utility, .wrapper.style2 > .container, .side-nav, div.header, div.navbar, .kudoable, .chapter-header, .backstretch, .meta-comments, .navigation.section, .credits.section, .main-container .container:after, .footer, #main .dropdown > button.dropdown-toggle, .menu-search, #page:before, #page:after, .cha-lst.sm-hide.j_update_list, #hero-header, .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_4, .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7 .notes, #actionbar, #back-to-top, .wpulike, .hm11.x-bar-space, .hm1.x-bar, .hm11.x-bar, .x-off-canvas, .x-scroll-top.right, #x-root > div.x-bar-space-right, .container > .content > .row > div:nth-child(2), .pp .top-bar-area, .navigation-bar, #wpadminbar, #header-image, #author-info, #scrollup, .zmenu, #pre_story_links, #profile_top, .lc-wrapper, #review, #p_footer, .t_head.hbox, body#top > #content, #d_menu, .menulink.maxwidth, .header-bg, .main-sidebar, #back-top, .panel > .panel-heading, .header-image {
-	display: none !important;
-}
+    .left, .right, .center
+        position: relative !important
 
+    .right
+        float: right
 
+    .fauxcolumn-right-outer .fauxcolumn-inner, .wc-comment-footer, .wpdiscuz-front-actions
+        border: none !important
 
-#container {
-	display: flex !important;
-}
+    .content-outer
+        box-shadow: none !important
 
-article:not(.comment):not(.comment-body), #story, #top, #content, #main-wrapper, #main, #primary, #primary-content, #page, #td-outer-wrap, #wrapper, #wrapper > #container, #wrapper.hfeed, .hentry, .entry-wrapper, .content-inner, .post-inner-content, .wrapper, .content-sidebar-wrap, .not-found, .error404 #main .searchform, .content, .site-container, .entry-header, .entry-content, .td-main-content, .td-main-content-wrap, .tdc-content-wrap, .td-pb-row, .td-container, .post_wrapper, .blog_post, .x-container, .x-main, body .x-main.left, .entry-wrap, .content-area, #content .row, #content .col-md-8, .box, :not(.comment-details) > .row, .container, .\38 u, .\38 u\24, .main-content, .main-outer, .footer-outer, .main-inner .columns, #comments, .layout__item, .comment-list, .chapter-body p, .format-standard .entry-wrap, .content-wrapper, .post, .section-inner, .post-content, .span8, .span8 > .left-col, .container > .row > div, .cha-page-in, #content-wrapper, .column-center-inner, .content-outer, .lightpanel, .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1), .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper {
-	margin: 0 auto !important;
-    width: var(--reading-width) !important;
-	background-color: transparent !important;
-	background-image: none !important;
-    position: static !important;
-    border: none !important;
-    padding: 0 !important;
-	padding-left: var(--side-padding) !important;
-	padding-right: var(--side-padding) !important;
-    box-shadow: none !important;
-    max-width: 100% !important;
-	min-width: var(--reading-width) !important;
-}
+    .fa-long-arrow-left:before
+        content: "\2190"
 
-.sp-wrap-default, .sp-wrap-default .sp-body, p[dir=ltr] + table {
-	background: transparent !important;
-    border-color: #333;
-}
+    .fa-long-arrow-right:before
+        content: "\2192"
 
-hr {
-    margin: 0 auto !important;
-	background-color: #666;
-    border-color: #666;
-    padding: 0 !important;
-}
+    .fa-list:before, .glyphicon-th-list:before
+        content: "\2630"
 
-#textbox .alignleft, #textbox .alignright {
-	width: 48%;
-    display: table-cell;
-}
+    .fa-clock-o:before
+        content: "\01F558"
 
-.left, .right, .center {
-	position: relative !important;
-}
+    .fa-chevron-up:before, .glyphicon-triangle-top:before
+        content: "\25B2"
 
-.right {
-	float: right;
-}
+    .fa-chevron-down:before, .glyphicon-triangle-bottom:before
+        content: "\25BC"
 
-.fauxcolumn-right-outer .fauxcolumn-inner, .wc-comment-footer, .wpdiscuz-front-actions {
-	border: none !important;
-}
+    .fa-user:before
+        content: "\01F464"
 
-.content-outer {
-	box-shadow: none !important;
-}
+    .fa-at:before
+        content: "@"
 
-.fa-long-arrow-left:before {
-	content: "\2190";
-}
+    .fa-link:before
+        content: "\01F517"
 
-.fa-long-arrow-right:before {
-	content: "\2192";
-}
+    .fa-comments:before
+        content: "\01F4AC"
 
-.fa-list:before, .glyphicon-th-list:before {
-	content: "\2630";
-}
+    .fa-plus:before
+        content: "+"
+        font-weight: 900
+        margin-right: -8px
 
-.fa-clock-o:before {
-	content: "\01F558";
-}
+    .x-icon-reply:before
+        content: "\2937"
 
-.fa-chevron-up:before, .glyphicon-triangle-top:before {
-	content: "\25B2";
-}
+    .alllink, #actionbar
+        background-color: #1b1b1b !important
 
-.fa-chevron-down:before, .glyphicon-triangle-bottom:before {
-	content: "\25BC";
-}
+    body:before, .below-title-meta, .entry-meta, .comment, .comment-body, #comments, .wc-comment-right, .wpdiscuz-front-actions, .wc-form-wrapper, section.box.blacktext > div,
+    .body-fauxcolumn-outer .fauxcolumn-inner, .body-fauxcolumn-outer .cap-top .cap-left, .comments, .comment-inner, #respond, .post-meta, .pagination li a, .panel, .entry-meta span,
+    #comments .section-title span, #comments .section-title
+        background-color: transparent !important
+        background-image: none !important
 
-.fa-user:before {
-	content: "\01F464";
-}
+    textarea, input, textarea#comment, input[type="text"], input[type="email"], input[type="url"], input[type="password"], .progress
+        background: rgba(0, 0, 0, 0.2) !important
+        color: #ccc !important
 
-.fa-at:before {
-	content: "@";
-}
+    .commentlist .bypostauthor > div, .comments .comment-thread.inline-thread
+        background: rgba(0, 0, 0, 0.2) !important
+        border: none !important
+        padding: 10px 20px 10px 20px !important
 
-.fa-link:before {
-	content: "\01F517";
-}
+    /* Quote/Author Note Boxes */
+    .notice, .end-note
+        background-color: #333 !important
 
-.fa-comments:before {
-	content: "\01F4AC";
-}
+    /* Qidian WebNovel */
+    .cha-modal
+        right: 48px
+        margin-left: auto
+        margin-right: 0px
+        bottom: 48px
+        background: #111 !important
+        background-image: none
 
-.fa-plus:before {
-	content: "+";
-    font-weight: 900;
-    margin-right: -8px;
-}
-
-.x-icon-reply:before {
-	content: "\2937";
-}
-
-.alllink, #actionbar {
-    background-color: #1b1b1b !important;
-}
-
-body:before, .below-title-meta, .entry-meta, .comment, .comment-body, #comments, .wc-comment-right, .wpdiscuz-front-actions, .wc-form-wrapper, section.box.blacktext > div, .body-fauxcolumn-outer .fauxcolumn-inner, .body-fauxcolumn-outer .cap-top .cap-left, .comments, .comment-inner, #respond, .post-meta, .pagination li a, .panel, .entry-meta span, #comments .section-title span, #comments .section-title {
-	background-color: transparent !important;
-	background-image: none !important;
-}
-
-textarea, input, textarea#comment, input[type="text"], input[type="email"], input[type="url"], input[type="password"], .progress {
-	background: rgba(0, 0, 0, 0.2) !important;
-    color: #ccc !important;
-}
-
-.commentlist .bypostauthor > div, .comments .comment-thread.inline-thread {
-	background: rgba(0, 0, 0, 0.2) !important;
-    border: none !important;
-    padding: 10px 20px 10px 20px !important;
-}
-
-/* Quote/Author Note Boxes */
-.notice, .end-note {
-	background-color: #333 !important;
-}
-
-/* Qidian WebNovel */
-.cha-modal {
-	right: 48px;
-	margin-left: auto;
-	margin-right: 0px;
-	bottom: 48px;
-	background: #111 !important;
-	background-image: none;
-}
-
-.g_chat_reply textarea {
-	background: rgba(0, 0, 0, 0.75) !important;
-}
-}
+    .g_chat_reply textarea
+        background: rgba(0, 0, 0, 0.75) !important
+        
+    if hideComments
+        #comments, #comment_form_title, #comment_form_area, #disqus_thread
+            display: none !important
