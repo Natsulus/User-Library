@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        1.0.1
+@version        1.0.2
 @description    A customisable reader mode style for web novels. Default Dark Theme.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
@@ -142,7 +142,8 @@ domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), dom
     #comments, .layout__item, .comment-list, .chapter-body p, .format-standard .entry-wrap, .content-wrapper, .post, .section-inner, .post-content, .span8, .span8 > .left-col,
     .container > .row > div, .cha-page-in, #content-wrapper, .column-center-inner, .content-outer, .lightpanel,
     .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1),
-    .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper
+    .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper,
+    #layout
         margin: 0 auto !important
         background-color: transparent !important
         background-image: none !important
