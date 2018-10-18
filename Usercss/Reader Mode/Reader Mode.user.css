@@ -1,12 +1,11 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        1.0.2
+@version        1.0.3
 @description    A customisable reader mode style for web novels. Default Dark Theme.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
 @supportURL		https://github.com/Natsulus/User-Library/issues
-@updateURL      https://raw.githubusercontent.com/Natsulus/User-Library/master/Usercss/Reader%20Mode/Reader%20Mode.user.css
 @preprocessor	stylus
 @var select device "Device" {
     "PC": "pc",
@@ -26,8 +25,6 @@
 @var color customTextColour "Value" #CCCCCC
 @var checkbox checkBackgroundColour "Custom Background Colour" 0
 @var color customBackgroundColour "Value" #222222
-@var checkbox checkSidePadding "Custom Side Padding" 0
-@var text customSidePadding "Value" 0px
 @var checkbox hideComments "Hide Comments" 0
 ==/UserStyle== */
 
@@ -42,9 +39,8 @@ domain("shiroyukitranslations.com"), domain("aihristdreamtranslations.com"), dom
 domain("rebirth.online"), domain("syilpharhea.com"), domain("snowycodex.com"), domain("pyontranslations.com"), domain("blobtranslations.com"),
 domain("storiesonline.net"), domain("fantasy-books.live"), domain("paste.imirhil.fr"), domain("paste.jaegers.net"), domain("otakulair.com"),
 domain("oniichanyamete.moe"), domain("ebisutranslations.com"), domain("paste.fizi.ca"), domain("fictionpress.com"), domain("ensjtrans.com"),
-domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), domain("wolfiehonyaku.com")
-    defaultSidePadding = 0px
-
+domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), domain("wolfiehonyaku.com"), domain("rhextranslations.com"), domain("bhauth.com"),
+domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingneet.com")
     if device == pc
         defaultReadingWidth = 800px
         defaultFontSize = 17px
@@ -132,7 +128,8 @@ domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), dom
     .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7 .notes, #actionbar, #back-to-top, .wpulike, .hm11.x-bar-space, .hm1.x-bar, .hm11.x-bar, .x-off-canvas,
     .x-scroll-top.right, #x-root > div.x-bar-space-right, .container > .content > .row > div:nth-child(2), .pp .top-bar-area, .navigation-bar, #wpadminbar, #header-image, #author-info, #scrollup,
     .zmenu, #pre_story_links, #profile_top, .lc-wrapper, #review, #p_footer, .t_head.hbox, body#top > #content, #d_menu, .menulink.maxwidth, .header-bg, .main-sidebar, #back-top,
-    .panel > .panel-heading, .header-image, #headerwrap, .post-date-wrap
+    .panel > .panel-heading, .header-image, .sidebar, widgetbot-crate, body:not(.custom-background-image)::before, body:not(.custom-background-image)::after, #bit,
+	#headerwrap, .post-date-wrap
 	    display: none !important
         
     article:not(.comment):not(.comment-body), #story, #top, #content, #main-wrapper, #main, #primary, #primary-content, #page, #td-outer-wrap, #wrapper, #wrapper > #container, #wrapper.hfeed,
@@ -142,8 +139,8 @@ domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), dom
     #comments, .layout__item, .comment-list, .chapter-body p, .format-standard .entry-wrap, .content-wrapper, .post, .section-inner, .post-content, .span8, .span8 > .left-col,
     .container > .row > div, .cha-page-in, #content-wrapper, .column-center-inner, .content-outer, .lightpanel,
     .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1),
-    .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper,
-    #layout
+    .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper
+    .content > .eleven.columns, .auto-style1, #layout
         margin: 0 auto !important
         background-color: transparent !important
         background-image: none !important
@@ -158,12 +155,6 @@ domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), dom
         else
             min-width: defaultReadingWidth !important
             width: defaultReadingWidth !important
-        if checkSidePadding
-            padding-left: customSidePadding !important
-            padding-right: customSidePadding !important
-        else
-            padding-left: defaultSidePadding !important
-            padding-right: defaultSidePadding !important
             
     .sp-wrap-default, .sp-wrap-default .sp-body, p[dir=ltr] + table
         background: transparent !important
