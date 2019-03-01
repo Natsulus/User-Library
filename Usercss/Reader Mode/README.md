@@ -26,8 +26,4 @@ A customisable web novel reader mode UserCSS style that supports both PC and Mob
 - Support Comic/Manga
 - Another Style, Focus Mode, for videos and games
 - Another Style, Style Choice, for major sites (Google, Github, Youtube, Facebook, Twitter, etc)
-
-## Release Log
-
-### v1.0.0
-- Customisable Reader Mode Style Released
+- Portrait Mode

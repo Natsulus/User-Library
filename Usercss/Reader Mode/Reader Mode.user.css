@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        1.0.12
+@version        1.0.13
 @description    A customisable reader mode style for web novels. Default Dark Theme.
 @author         Natsulus
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
@@ -17,11 +17,11 @@
     "Light": "light"
 }
 @var checkbox checkReadingWidth "Custom Reading Width" 0
-@var text customReadingWidth "Value" 800px
+@var text customReadingWidth "Value" 80vmin
 @var checkbox checkFontSize "Custom Font Size" 0
-@var text customFontSize "Value" 17px
+@var text customFontSize "Value" 1.7vmin
 @var checkbox checkLineHeight "Custom Line Height" 0
-@var text customLineHeight "Value" 23px
+@var text customLineHeight "Value" 2.3vmin
 @var checkbox checkTextColour "Custom Text Colour" 0
 @var color customTextColour "Value" #CCCCCC
 @var checkbox checkBackgroundColour "Custom Background Colour" 0
@@ -43,13 +43,13 @@ domain("oniichanyamete.moe"), domain("ebisutranslations.com"), domain("paste.fiz
 domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), domain("wolfiehonyaku.com"), domain("rhextranslations.com"), domain("bhauth.com"),
 domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingneet.com"), domain("wordexcerpt.com"), domain("funwithstela.web.id"), domain("tigertranslations.org"), domain("vim.cx"), domain("weletranslation.com"), domain("anonbin.ml"), domain("2slow2latemtl.icu"), domain("infinitenoveltranslations.net"), domain("hikkinomori.mistbinder.org"), domain("birdytranslations.com"), domain("paste.dd.zom.bi"), domain("privatebin.net"), domain("creativenovels.com"), domain("sabishiidesu.com"), domain("isecainovels.com"), regexp(".*\\/\\/docs\\.google\\.com\\/.+pub.*")
     if device == pc
-        defaultReadingWidth = 800px
-        defaultFontSize = 17px
-        defaultLineHeight = 23px
+        defaultReadingWidth = 80vmin
+        defaultFontSize = 1.7vmin
+        defaultLineHeight = 2.3vmin
     if device == mobile
-        defaultReadingWidth = 600px
-        defaultFontSize = 13px
-        defaultLineHeight = 20px
+        defaultReadingWidth = 80vmax
+        defaultFontSize = 1.7vmax
+        defaultLineHeight = 2.3vmax
     if theme == dark
         defaultTextColour = #CCC
         defaultBackgroundColour = #222
