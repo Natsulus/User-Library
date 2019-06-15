@@ -27,3 +27,6 @@ A customisable web novel reader mode UserCSS style that supports both PC and Mob
 - Another Style, Focus Mode, for videos and games
 - Another Style, Style Choice, for major sites (Google, Github, Youtube, Facebook, Twitter, etc)
 - Portrait Mode
+
+## v2
+A planned rewrite with better readability, separation, and reliability.
