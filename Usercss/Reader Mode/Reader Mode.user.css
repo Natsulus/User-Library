@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        1.0.18
+@version        1.0.19
 @description    A customisable reader mode style for web novels. Default Dark Theme.
-@author         Natsulus
+@author         Natsulus <natsulus@outlook.com> (https://github.com/Natsulus)
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
 @supportURL		https://github.com/Natsulus/User-Library/issues
 @updateURL      https://raw.githubusercontent.com/Natsulus/User-Library/master/Usercss/Reader%20Mode/Reader%20Mode.user.css
+@license        MIT
 @preprocessor	stylus
 @var select device "Device" {
     "PC": "pc",
@@ -29,6 +30,20 @@
 @var checkbox hideComments "Hide Comments" 0
 ==/UserStyle== */
 
+if device == pc
+    defaultReadingWidth = 80vmin
+    defaultFontSize = 1.7vmin
+    defaultLineHeight = 2.3vmin
+if device == mobile
+    defaultReadingWidth = 80vmax
+    defaultFontSize = 1.7vmax
+    defaultLineHeight = 2.3vmax
+if theme == dark
+    defaultTextColour = #CCC
+    defaultBackgroundColour = #222
+if theme == light
+    defaultTextColour = #000
+    defaultBackgroundColour = #FFF
 @-moz-document domain("webnovel.com"), domain("volarenovels.com"), domain("moonbunnycafe.com"), domain("wuxiaworld.com"), domain("machineslicedbread.xyz"), 
 domain("wordpress.com"), domain("saigotranslation.com"), domain("novitranslation.com"), domain("novelstranslation.com"), domain("myoniyonitranslations.com"),
 domain("pgttranslations.com"), domain("kobatochan.com"), domain("syzctranslations.github.io"), domain("translationnations.com"), domain("lightnovelstranslations.com"),
@@ -42,26 +57,12 @@ domain("storiesonline.net"), domain("fantasy-books.live"), domain("paste.imirhil
 domain("oniichanyamete.moe"), domain("ebisutranslations.com"), domain("paste.fizi.ca"), domain("fictionpress.com"), domain("ensjtrans.com"),
 domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), domain("wolfiehonyaku.com"), domain("rhextranslations.com"), domain("bhauth.com"),
 domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingneet.com"), domain("wordexcerpt.com"), domain("funwithstela.web.id"), domain("tigertranslations.org"), domain("vim.cx"), domain("weletranslation.com"), domain("anonbin.ml"), domain("2slow2latemtl.icu"), domain("infinitenoveltranslations.net"), domain("hikkinomori.mistbinder.org"), domain("birdytranslations.com"), domain("paste.dd.zom.bi"), domain("privatebin.net"), domain("creativenovels.com"), domain("sabishiidesu.com"), domain("isecainovels.com"), domain("secured.fi"), domain("veratales.com"), domain("tech-port.de"), domain("atebin.com"), domain("secured.fi"), domain("tech-port.de"), domain("cloudytranslations.net"), domain("asianhobbyist.com"), domain("zirusmusings.com"), domain("boredtl.com"), domain("yado-inn.com"), regexp(".*\\/\\/docs\\.google\\.com\\/.+pub.*")
-    if device == pc
-        defaultReadingWidth = 80vmin
-        defaultFontSize = 1.7vmin
-        defaultLineHeight = 2.3vmin
-    if device == mobile
-        defaultReadingWidth = 80vmax
-        defaultFontSize = 1.7vmax
-        defaultLineHeight = 2.3vmax
-    if theme == dark
-        defaultTextColour = #CCC
-        defaultBackgroundColour = #222
-    if theme == light
-        defaultTextColour = #000
-        defaultBackgroundColour = #FFF
 
     *:not(a):not(._on):not(i):not(svg), .content .primary main article.chapter .entry-content p, p > i
         if checkTextColour
-          color: customTextColour !important
+            color: customTextColour !important
         else
-          color: defaultTextColour !important
+            color: defaultTextColour !important
 
     *, .content .primary main article.chapter .entry-content p
         font-family: Arial,sans-serif,Verdana !important
@@ -134,7 +135,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
     .x-scroll-top.right, #x-root > div.x-bar-space-right, .container > .content > .row > div:nth-child(2), .pp .top-bar-area, .navigation-bar, #wpadminbar, #header-image, #author-info, #scrollup,
     .zmenu, #pre_story_links, #profile_top, .lc-wrapper, #review, #p_footer, .t_head.hbox, body#top > #content, #d_menu, .menulink.maxwidth, .header-bg, .main-sidebar, #back-top,
     .panel > .panel-heading, .header-image, .sidebar, widgetbot-crate, body:not(.custom-background-image)::before, body:not(.custom-background-image)::after, #bit,
-	#headerwrap, .post-date-wrap, .custom-header, .mtsnb, .site-container::before, .site-container::after, .viewitem-panel, .code-block.code-block-1.ai-viewport-1, .x-main.full .toolbar, .x-main.full .code-block, .draggable_crn, .bg-photo, .vertical-ad-container, .bg-photo-overlay, #site-header-container, #sb2, #sticky-search-sticky-wrapper, .mh-sidebar, #specialsearchresults, .suggestion_list_overall, .small-t-pheader, #bookmark-chapter, .panel-footer, #jetpack_remote_comment, div[id^="announcement-"], .ad-wrapper, .elementor-16310 .elementor-element.elementor-element-51660169, .ezoic-ad, aside#sb1
+	#headerwrap, .post-date-wrap, .custom-header, .mtsnb, .site-container::before, .site-container::after, .viewitem-panel, .code-block.code-block-1.ai-viewport-1, .x-main.full .toolbar, .x-main.full .code-block, .draggable_crn, .bg-photo, .vertical-ad-container, .bg-photo-overlay, #site-header-container, #sb2, #sticky-search-sticky-wrapper, .mh-sidebar, #specialsearchresults, .suggestion_list_overall, .small-t-pheader, #bookmark-chapter, .panel-footer, #jetpack_remote_comment, div[id^="announcement-"], .ad-wrapper, .elementor-16310 .elementor-element.elementor-element-51660169, .ezoic-ad, aside#sb1, #ezmobfooter
         min-width: 0px !important
         min-height: 0px !important
         display: none !important
@@ -148,7 +149,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
     .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1),
     .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper
     .content > .eleven.columns, .auto-style1, #layout, #tie-wrapper, .tie-row, .entry-body, .article-wrapper, #main #items, #main .item, .site-content-contain, #content .wrap,
-    .Chapter__container--3pCsP, .page_body, #content > #left, #main > .inner, .inside-article, .p-15, .mh-container, .mh-wrapper, .mh-main, .mh-content, .x-container.main::before, .x-container > .offset, #x-root, #content-container, .panel.panel-default, .main, .mobile .main-inner, .date-outer, .elementor-16310 .elementor-element.elementor-element-653cbccc, .elementor-16310 .elementor-element.elementor-element-653cbccc:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated, .elementor-16310 .elementor-element.elementor-element-6095815f:not(.elementor-motion-effects-element-type-background)
+    .Chapter__container--3pCsP, .page_body, #content > #left, #main > .inner, .inside-article, .p-15, .mh-container, .mh-wrapper, .mh-main, .mh-content, .x-container.main::before, .x-container > .offset, #x-root, #content-container, .panel.panel-default, .main, .mobile .main-inner, .date-outer, .elementor-16310 .elementor-element.elementor-element-653cbccc, .elementor-16310 .elementor-element.elementor-element-653cbccc:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated, .elementor-16310 .elementor-element.elementor-element-6095815f:not(.elementor-motion-effects-element-type-background), .elementor-widget-container, .elementor-section.elementor-inner-section
         margin: 0 auto !important
         float: none !important
         background-color: transparent !important
@@ -275,3 +276,22 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
     
     #pagewrap > #body > #layout > #content .page-content p
         margin: auto !important
+        
+@-moz-document domain("disqus.com")
+    *:not(a):not(i), p > i
+        if checkTextColour
+          color: customTextColour !important
+        else
+          color: defaultTextColour !important
+        
+    a, a p, a font, a span, a strong
+        color: #a00000 !important
+
+    a:hover, a:hover p, a:hover font, a:hover span, a:hover strong
+        color: #bb0000 !important
+
+    a:visited, a:visited p, a:visited font, a:visited span, a:visited strong
+        color: #8705a7 !important
+
+    a:visited:hover, a:visited:hover p, a:visited:hover font, a:visited:hover span, a:visited:hover strong
+        color: #a12ebe !important
