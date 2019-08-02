@@ -30,3 +30,4 @@ A customisable web novel reader mode UserCSS style that supports both PC and Mob
 
 ## v2
 A planned rewrite with better readability, separation, and reliability.
+Development is now in progress.
