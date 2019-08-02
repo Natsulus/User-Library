@@ -135,7 +135,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
     .x-scroll-top.right, #x-root > div.x-bar-space-right, .container > .content > .row > div:nth-child(2), .pp .top-bar-area, .navigation-bar, #wpadminbar, #header-image, #author-info, #scrollup,
     .zmenu, #pre_story_links, #profile_top, .lc-wrapper, #review, #p_footer, .t_head.hbox, body#top > #content, #d_menu, .menulink.maxwidth, .header-bg, .main-sidebar, #back-top,
     .panel > .panel-heading, .header-image, .sidebar, widgetbot-crate, body:not(.custom-background-image)::before, body:not(.custom-background-image)::after, #bit,
-	#headerwrap, .post-date-wrap, .custom-header, .mtsnb, .site-container::before, .site-container::after, .viewitem-panel, .code-block.code-block-1.ai-viewport-1, .x-main.full .toolbar, .x-main.full .code-block, .draggable_crn, .bg-photo, .vertical-ad-container, .bg-photo-overlay, #site-header-container, #sb2, #sticky-search-sticky-wrapper, .mh-sidebar, #specialsearchresults, .suggestion_list_overall, .small-t-pheader, #bookmark-chapter, .panel-footer, #jetpack_remote_comment, div[id^="announcement-"], .ad-wrapper, .elementor-16310 .elementor-element.elementor-element-51660169, .ezoic-ad, aside#sb1, #ezmobfooter, .writeit-header, .wi-fic_r-content, .header-bg-novel
+	#headerwrap, .post-date-wrap, .custom-header, .mtsnb, .site-container::before, .site-container::after, .viewitem-panel, .code-block.code-block-1.ai-viewport-1, .x-main.full .toolbar, .x-main.full .code-block, .draggable_crn, .bg-photo, .vertical-ad-container, .bg-photo-overlay, #site-header-container, #sb2, #sticky-search-sticky-wrapper, .mh-sidebar, #specialsearchresults, .suggestion_list_overall, .small-t-pheader, #bookmark-chapter, .panel-footer, #jetpack_remote_comment, div[id^="announcement-"], .ad-wrapper, .elementor-16310 .elementor-element.elementor-element-51660169, .ezoic-ad, aside#sb1, #ezmobfooter, .writeit-header, .wi-fic_r-content, .header-bg-novel, div.content > div[style="position: absolute;width: 100%;background: #232323;bottom:-40px; left: 0; right: 0; top: 60px;z-index:-1;"]
         min-width: 0px !important
         min-height: 0px !important
         display: none !important
@@ -166,7 +166,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
             min-width: defaultReadingWidth !important
             width: defaultReadingWidth !important
             
-    .sp-wrap-default, .sp-wrap-default .sp-body, p[dir=ltr] + table
+    .sp-wrap-default, .sp-wrap-default .sp-body, p[dir=ltr] + table, .content .primary main article.chapter .chapter-navigation .toc-nav a
         background: transparent !important
         border-color: #333
 
