@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Reader Mode
 @namespace      https://github.com/Natsulus/User-Library
-@version        1.0.21
+@version        1.0.22
 @description    A customisable reader mode style for web novels. Default Dark Theme.
 @author         Natsulus <natsulus@outlook.com> (https://github.com/Natsulus)
 @homepageURL	https://github.com/Natsulus/User-Library/tree/master/Usercss/Reader%20Mode
@@ -56,7 +56,7 @@ domain("rebirth.online"), domain("syilpharhea.com"), domain("snowycodex.com"), d
 domain("storiesonline.net"), domain("fantasy-books.live"), domain("paste.imirhil.fr"), domain("paste.jaegers.net"), domain("otakulair.com"),
 domain("oniichanyamete.moe"), domain("ebisutranslations.com"), domain("paste.fizi.ca"), domain("fictionpress.com"), domain("ensjtrans.com"),
 domain("ehmed.xyz"), domain("fujitranslation.com"), domain("jikutrans.com"), domain("wolfiehonyaku.com"), domain("rhextranslations.com"), domain("bhauth.com"),
-domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingneet.com"), domain("wordexcerpt.com"), domain("funwithstela.web.id"), domain("tigertranslations.org"), domain("vim.cx"), domain("weletranslation.com"), domain("anonbin.ml"), domain("2slow2latemtl.icu"), domain("infinitenoveltranslations.net"), domain("hikkinomori.mistbinder.org"), domain("birdytranslations.com"), domain("paste.dd.zom.bi"), domain("privatebin.net"), domain("creativenovels.com"), domain("sabishiidesu.com"), domain("isecainovels.com"), domain("secured.fi"), domain("veratales.com"), domain("tech-port.de"), domain("atebin.com"), domain("secured.fi"), domain("tech-port.de"), domain("cloudytranslations.net"), domain("asianhobbyist.com"), domain("zirusmusings.com"), domain("boredtl.com"), domain("yado-inn.com"), domain("gakuseitranslations.com"), domain("cclawtranslations.com"), domain("scribblehub.com"), regexp(".*\\/\\/docs\\.google\\.com\\/.+pub.*")
+domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingneet.com"), domain("wordexcerpt.com"), domain("funwithstela.web.id"), domain("tigertranslations.org"), domain("vim.cx"), domain("weletranslation.com"), domain("anonbin.ml"), domain("2slow2latemtl.icu"), domain("infinitenoveltranslations.net"), domain("hikkinomori.mistbinder.org"), domain("birdytranslations.com"), domain("paste.dd.zom.bi"), domain("privatebin.net"), domain("creativenovels.com"), domain("sabishiidesu.com"), domain("isecainovels.com"), domain("secured.fi"), domain("veratales.com"), domain("tech-port.de"), domain("atebin.com"), domain("secured.fi"), domain("tech-port.de"), domain("cloudytranslations.net"), domain("asianhobbyist.com"), domain("zirusmusings.com"), domain("boredtl.com"), domain("yado-inn.com"), domain("gakuseitranslations.com"), domain("cclawtranslations.com"), domain("scribblehub.com"), domain("tseirptranslations.com"), regexp(".*\\/\\/docs\\.google\\.com\\/.+pub.*")
 
     *:not(a):not(._on):not(i):not(svg), .content .primary main article.chapter .entry-content p, p > i, .content .primary main article.chapter .entry-content div p, .content .primary main article.novel .entry-content p
         if checkTextColour
@@ -135,7 +135,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
     .x-scroll-top.right, #x-root > div.x-bar-space-right, .container > .content > .row > div:nth-child(2), .pp .top-bar-area, .navigation-bar, #wpadminbar, #header-image, #author-info, #scrollup,
     .zmenu, #pre_story_links, #profile_top, .lc-wrapper, #review, #p_footer, .t_head.hbox, body#top > #content, #d_menu, .menulink.maxwidth, .header-bg, .main-sidebar, #back-top,
     .panel > .panel-heading, .header-image, .sidebar, widgetbot-crate, body:not(.custom-background-image)::before, body:not(.custom-background-image)::after, #bit,
-	#headerwrap, .post-date-wrap, .custom-header, .mtsnb, .site-container::before, .site-container::after, .viewitem-panel, .code-block.code-block-1.ai-viewport-1, .x-main.full .toolbar, .x-main.full .code-block, .draggable_crn, .bg-photo, .vertical-ad-container, .bg-photo-overlay, #site-header-container, #sb2, #sticky-search-sticky-wrapper, .mh-sidebar, #specialsearchresults, .suggestion_list_overall, .small-t-pheader, #bookmark-chapter, .panel-footer, #jetpack_remote_comment, div[id^="announcement-"], .ad-wrapper, .elementor-16310 .elementor-element.elementor-element-51660169, .ezoic-ad, aside#sb1, #ezmobfooter, .writeit-header, .wi-fic_r-content, .header-bg-novel, div.content > div[style="position: absolute;width: 100%;background: #232323;bottom:-40px; left: 0; right: 0; top: 60px;z-index:-1;"]
+	#headerwrap, .post-date-wrap, .custom-header, .mtsnb, .site-container::before, .site-container::after, .viewitem-panel, .code-block.code-block-1.ai-viewport-1, .x-main.full .toolbar, .x-main.full .code-block, .draggable_crn, .bg-photo, .vertical-ad-container, .bg-photo-overlay, #site-header-container, #sb2, #sticky-search-sticky-wrapper, .mh-sidebar, #specialsearchresults, .suggestion_list_overall, .small-t-pheader, #bookmark-chapter, .panel-footer, #jetpack_remote_comment, div[id^="announcement-"], .ad-wrapper, .elementor-16310 .elementor-element.elementor-element-51660169, .ezoic-ad, aside#sb1, #ezmobfooter, .writeit-header, .wi-fic_r-content, .header-bg-novel, div.content > div[style="position: absolute;width: 100%;background: #232323;bottom:-40px; left: 0; right: 0; top: 60px;z-index:-1;"], .content > .container main > #actions, .content > .container > .row > div.secondary, .navigation.no-padding
         min-width: 0px !important
         min-height: 0px !important
         display: none !important
@@ -149,7 +149,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
     .tmblr-iframe-overlay.tmblr-iframe-themed.tmblr-iframe-compact > .row > .column.grid_7, .post-title, .site, .container > .content > .row > div:nth-child(1),
     .container > .row > div > pre, #content .post-inner, #content_parent, #content_wrapper, #content_wrapper_inner, .max-width, div.well, div.input-group, .site-content-wrapper, .hentry-wrapper
     .content > .eleven.columns, .auto-style1, #layout, #tie-wrapper, .tie-row, .entry-body, .article-wrapper, #main #items, #main .item, .site-content-contain, #content .wrap,
-    .Chapter__container--3pCsP, .page_body, #content > #left, #main > .inner, .inside-article, .p-15, .mh-container, .mh-wrapper, .mh-main, .mh-content, .x-container.main::before, .x-container > .offset, #x-root, #content-container, .panel.panel-default, .main, .mobile .main-inner, .date-outer, .elementor-16310 .elementor-element.elementor-element-653cbccc, .elementor-16310 .elementor-element.elementor-element-653cbccc:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated, .elementor-16310 .elementor-element.elementor-element-6095815f:not(.elementor-motion-effects-element-type-background), .elementor-widget-container, .elementor-section.elementor-inner-section, .reading-content, .wi_fic_wrap.chapter, .wi-main, #main\ read\ chapter, #chp_contents, .nav_chp_fi, .next_nav_links, .wi_bc_out, .wi_breadcrumb, .header-bg-novel, .box_fictionpage, .n_fic_buttons, .fic_stats
+    .Chapter__container--3pCsP, .page_body, #content > #left, #main > .inner, .inside-article, .p-15, .mh-container, .mh-wrapper, .mh-main, .mh-content, .x-container.main::before, .x-container > .offset, #x-root, #content-container, .panel.panel-default, .main, .mobile .main-inner, .date-outer, .elementor-16310 .elementor-element.elementor-element-653cbccc, .elementor-16310 .elementor-element.elementor-element-653cbccc:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated, .elementor-16310 .elementor-element.elementor-element-6095815f:not(.elementor-motion-effects-element-type-background), .elementor-widget-container, .elementor-section.elementor-inner-section, .reading-content, .wi_fic_wrap.chapter, .wi-main, #main\ read\ chapter, #chp_contents, .nav_chp_fi, .next_nav_links, .wi_bc_out, .wi_breadcrumb, .header-bg-novel, .box_fictionpage, .n_fic_buttons, .fic_stats, .post-inner
         margin: 0 auto !important
         float: none !important
         background-color: transparent !important
@@ -230,7 +230,7 @@ domain("rinkagetranslation.com"), domain("firebirdsnest.org"), domain("workingne
             display: none !important
             
     /* Hacky Fixes*/
-    body.header-image.page.group-blog
+    body.header-image.page.group-blog, .content > .container > .row > .primary > main > .chapter > .entry-footer
         display: block !important
     
     #pagewrap > #body > #layout > #content .page-content p
